@@ -20,7 +20,7 @@ public class bomb : MonoBehaviour
     {
         if (spawn == 1)
         {
-            transform.position = dolphin.position + new Vector3( Random.Range(10,-10),Random.Range(10,-10),0);
+            transform.position = dolphin.position + new Vector3( Random.Range(12,-12),Random.Range(10,-10),0);
             spawn = 0;
         } 
     }
