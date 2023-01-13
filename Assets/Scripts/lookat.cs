@@ -12,9 +12,9 @@ public class lookat : MonoBehaviour
     [SerializeField]
     Transform LookAt;
     [SerializeField]
-    KeyCode a;
+    private KeyCode Left = KeyCode.A;
     [SerializeField]
-    KeyCode d;
+    private KeyCode Right = KeyCode.D;
     // Start is called before the first frame update
     void Start()
     {

@@ -337,14 +337,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1936855616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777503383700a0d4c9ad7056818042e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8631a5734fd1d7d4c882afbb2aa372e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  dolphinPos: {fileID: 28196014}
-  LookAt: {fileID: 1936855619}
-  a: 97
-  d: 100
+  speed: 0
+  dolphinPos: {fileID: 0}
+  LookAt: {fileID: 0}
+  KeyCode: 97
+  d: 0
 --- !u!212 &1936855618
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -420,6 +420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936855619}
     m_Modifications:
+    - target: {fileID: 2622591467155351656, guid: e48a6217498d6a74d9424d68c75d73be, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 46e15f9a4ad36b94aba59d9589b4f7e2, type: 3}
     - target: {fileID: 2622591467155351657, guid: e48a6217498d6a74d9424d68c75d73be, type: 3}
       propertyPath: m_Name
       value: Delfin
@@ -470,3 +474,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e48a6217498d6a74d9424d68c75d73be, type: 3}
+--- !u!1 &2622591467166487750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2622591467155351657, guid: e48a6217498d6a74d9424d68c75d73be, type: 3}
+  m_PrefabInstance: {fileID: 2622591467166487749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2622591467166487751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622591467166487750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b043274d9c94e4e8c170a18264c6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToTurnTo: {r: 1, g: 1, b: 1, a: 1}
