@@ -16,7 +16,7 @@ public class pointcounter : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { //functional counter v
         scoreText.text = score + " points";
         if (Input.GetKeyDown(KeyCode.R))
         {
