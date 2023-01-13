@@ -21,8 +21,9 @@ public class spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if (time <= 15)
+        transform.RotateAround(delfin.transform.position,Vector3.forward,90);
+        time += 1 * Time.deltaTime;
+        if (time >= 15)
         {
             Instantiate(boat, spawner.position, Quaternion.identity);
             time = 0;
