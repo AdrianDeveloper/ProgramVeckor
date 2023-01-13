@@ -21,7 +21,7 @@ public class spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(delfin.transform.position,Vector3.forward,90);
+        transform.RotateAround(delfin.transform.position, Vector3.forward, 5);
         time += 1 * Time.deltaTime;
         if (time >= 15)
         {
