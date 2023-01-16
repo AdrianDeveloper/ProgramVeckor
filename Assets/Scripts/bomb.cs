@@ -5,11 +5,10 @@ using UnityEngine;
 public class bomb : MonoBehaviour
 {
     [SerializeField]
-    Transform spawner;
-    [SerializeField]
     GameObject bomba;
     private bool iMun = false;
-    private int spawn = 0;  
+    private int spawn = 0;
+    float time = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +18,7 @@ public class bomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawn == 1)
-        {
-            Instantiate(bomba, spawner.position, Quaternion.identity);
-            spawn = 0;
-        } 
+      
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
