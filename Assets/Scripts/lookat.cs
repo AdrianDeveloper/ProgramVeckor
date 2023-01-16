@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class lookat : MonoBehaviour
 {
+     
     Vector3 dir;
     [SerializeField]
     float speed;
@@ -34,5 +35,9 @@ public class lookat : MonoBehaviour
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.back, 60 * Time.deltaTime);
         }
+     
+        
+
+
     }
 }
