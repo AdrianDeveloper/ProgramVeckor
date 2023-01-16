@@ -3,7 +3,10 @@ guid: 29db9e9e2b5b4fc42a5d50ad35d1bcd6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawner: {instanceID: 0}
+  - dolphin: {instanceID: 0}
+  - bomba: {fileID: 6688633410039622636, guid: 484ff8b4a02be7d4094c2a84f44d1004, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

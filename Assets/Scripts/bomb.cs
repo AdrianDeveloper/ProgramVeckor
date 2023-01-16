@@ -5,8 +5,9 @@ using UnityEngine;
 public class bomb : MonoBehaviour
 {
     [SerializeField]
-    Transform dolphin;
-
+    Transform spawner;
+    [SerializeField]
+    GameObject bomba;
     private bool iMun = false;
     private int spawn = 0;  
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class bomb : MonoBehaviour
     {
         if (spawn == 1)
         {
-            transform.position = dolphin.position + new Vector3( Random.Range(12,-12),Random.Range(10,-10),0);
+            Instantiate(bomba, spawner.position, Quaternion.identity);
             spawn = 0;
         } 
     }

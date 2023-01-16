@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29db9e9e2b5b4fc42a5d50ad35d1bcd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
   dolphin: {fileID: 0}
+  bomba: {fileID: 6688633410039622636}
 --- !u!50 &7222761787735985370
 Rigidbody2D:
   serializedVersion: 4

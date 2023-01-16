@@ -8,7 +8,7 @@ public class dolphin : MonoBehaviour
     private Renderer rend;
     [SerializeField]
     private Color colorToTurnTo = Color.white;
- 
+    int onground = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,18 @@ public class dolphin : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rend.material.color = colorToTurnTo;
+            onground = 0;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (onground == 1)
+        {
+            if (collision.gameObject.tag == "enemy")
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
+

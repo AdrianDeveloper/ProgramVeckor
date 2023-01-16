@@ -14,7 +14,7 @@ public class boat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,5 +22,15 @@ public class boat : MonoBehaviour
     {
         dir = (del.transform.position - båt.transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
