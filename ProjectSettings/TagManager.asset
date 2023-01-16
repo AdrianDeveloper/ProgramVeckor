@@ -38,11 +38,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4117167009
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 4117167009
+  - name: Boat
+    uniqueID: 780240995
+    locked: 0
+  - name: Bomb
+    uniqueID: 2549921131
+    locked: 0
+  - name: Effects
+    uniqueID: 322297693
+    locked: 0
+  - name: Dolphin
+    uniqueID: 3076721545
     locked: 0
   - name: UI
     uniqueID: 2820027295
