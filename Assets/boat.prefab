@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  del: {fileID: 553759276996011155, guid: d4cabea63e6a9d942af48dccc462310c, type: 3}
+  del: {fileID: 0}
   "b\xE5t": {fileID: 1867611632454775937}
 --- !u!61 &1867611632454775943
 BoxCollider2D:
