@@ -1632,8 +1632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2118890806}
   - component: {fileID: 2118890807}
-  - component: {fileID: 2118890808}
-  - component: {fileID: 2118890809}
   m_Layer: 5
   m_Name: Meny
   m_TagString: Untagged
@@ -1673,30 +1671,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a8023f02baff6b48ab45f83610e5037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2118890808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118890805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58d53925e87450b42bca51745ecd3299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2118890809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118890805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8163607a916791340b9532e479ef92de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2123518634
