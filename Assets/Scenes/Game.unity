@@ -340,11 +340,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8631a5734fd1d7d4c882afbb2aa372e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  dolphinPos: {fileID: 0}
-  LookAt: {fileID: 0}
-  KeyCode: 97
-  d: 0
+  speed: 5
+  dolphinPos: {fileID: 28196014}
+  LookAt: {fileID: 1936855619}
+  Left: 97
+  Right: 100
 --- !u!212 &1936855618
 SpriteRenderer:
   m_ObjectHideFlags: 0
