@@ -25,13 +25,13 @@ public class lookat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(Left))
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 60 * Time.deltaTime);
         }
         dir = (LookAt.transform.position - dolphinPos.transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(Right))
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.back, 60 * Time.deltaTime);
         }
