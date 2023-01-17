@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class lookat : MonoBehaviour
 {
@@ -17,15 +18,18 @@ public class lookat : MonoBehaviour
     [SerializeField]
     private KeyCode Right = KeyCode.D;
     float dashAmount = 3;
+
+    TextMeshProUGUI dashAmountText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        dashAmountText = FindObjectOfType<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        dashAmountText.text = "Dashes remaining: " + dashAmount;
         if (Input.GetKey(Left))
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 60 * Time.deltaTime);
