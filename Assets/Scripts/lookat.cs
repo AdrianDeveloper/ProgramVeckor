@@ -35,9 +35,17 @@ public class lookat : MonoBehaviour
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.back, 60 * Time.deltaTime);
         }
-     
-        
+
+
 
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "border")
+        {
+            print ("balls");
+        }
+    }
 }
+

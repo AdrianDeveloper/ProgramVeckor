@@ -49,10 +49,7 @@ public class dolphin : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
-      if (collision.gameObject.tag == "border")
-        {
-            Destroy(this.gameObject);
-        } 
+    
        
     }
 }
