@@ -5,34 +5,48 @@ using UnityEngine;
 
 public class dolphin : MonoBehaviour
 {
+
+    private Animator gameAnimator;
     private Renderer rend;
+    public bool onground = true;
+    public bool hasBomb = false;
     [SerializeField]
     private Color colorToTurnTo = Color.white;
-    int onground = 1;
+    private KeyCode dropBomb = KeyCode.Q;
 
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
-        
+        gameAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (hasBomb == true)
+        {
+            Debug.Log("HAS BOMB");
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rend.material.color = colorToTurnTo;
-            onground = 0;
+            onground = false;
+        }
+        if (Input.GetKeyDown(dropBomb))
+        {
+            hasBomb = false;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (onground == 1)
+        if (onground == true)
         {
-            if (collision.gameObject.tag == "enemy")
+            if (collision.gameObject.tag == "Enemy")
             {
-                Destroy(this.gameObject);
+                hasBomb = true;
+                Destroy(collision.gameObject);
             }
         }
     }
