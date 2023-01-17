@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8631a5734fd1d7d4c882afbb2aa372e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashtext: {fileID: 0}
   speed: 5
   dolphinPos: {fileID: 1748438433}
   LookAt: {fileID: 1936855619}
@@ -1229,6 +1230,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
       propertyPath: m_Name
+      value: Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
+      propertyPath: m_TagString
       value: Bomb
       objectReference: {fileID: 0}
     - target: {fileID: 5568093957204351871, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
