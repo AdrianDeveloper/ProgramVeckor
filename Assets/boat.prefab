@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1347abc0c87824483efe1bd8574284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 2826391558729815250, guid: 97954f5273c71494c9d0e6aa94065226, type: 3}
   speed: 4
-  del: {fileID: 0}
   "b\xE5t": {fileID: 1867611632454775937}
 --- !u!61 &1867611632454775943
 BoxCollider2D:

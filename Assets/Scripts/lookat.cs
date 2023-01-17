@@ -8,6 +8,8 @@ public class lookat : MonoBehaviour
      
     Vector3 dir;
     [SerializeField]
+    TextMeshProUGUI dashtext;
+    [SerializeField]
     private float speed = 5;
     [SerializeField]
     Transform dolphinPos;
@@ -23,13 +25,13 @@ public class lookat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dashAmountText = FindObjectOfType<TextMeshProUGUI>();
+  
     }
 
     // Update is called once per frame
     void Update()
     {
-        dashAmountText.text = "Dashes remaining: " + dashAmount;
+       dashtext.text = "Dashes remaining: " + dashAmount;
         if (Input.GetKey(Left))
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 60 * Time.deltaTime);

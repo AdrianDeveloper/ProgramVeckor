@@ -6,6 +6,7 @@ using TMPro;
 public class boat : MonoBehaviour
 {
     int score = 0;
+    [SerializeField]
     TextMeshProUGUI scoreText;
     Vector3 dolphin;
     [SerializeField]
