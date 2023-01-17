@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 1391305010}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,7 +878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391305007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -900,7 +900,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -916,12 +916,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.1
 --- !u!1 &1430132440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,6 +1187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b043274d9c94e4e8c170a18264c6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onground: 1
+  hasBomb: 0
   colorToTurnTo: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1748438435
 Animator:
@@ -1198,7 +1200,7 @@ Animator:
   m_GameObject: {fileID: 1748438432}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f53c457ba3ca8b348a40798f74b1b3d0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 14ee6361bcb988a40863893eae00cda5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

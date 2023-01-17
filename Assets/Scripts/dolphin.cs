@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class dolphin : MonoBehaviour
 {
-
-    private Animator gameAnimator;
+    Animator animator;
     private Renderer rend;
     public bool onground = true;
     public bool hasBomb = false;
@@ -18,7 +17,8 @@ public class dolphin : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        gameAnimator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -37,6 +37,7 @@ public class dolphin : MonoBehaviour
         {
             hasBomb = false;
         }
+        animator.SetBool("hasBomb", hasBomb);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
