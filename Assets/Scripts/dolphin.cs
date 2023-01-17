@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class dolphin : MonoBehaviour
 {
+    [SerializeField]
+    Transform dolpin;
+    [SerializeField]
+    Transform bomba;
     Animator animator;
     private Renderer rend;
     public bool onground = true;
@@ -24,6 +28,10 @@ public class dolphin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasBomb == true & Input.GetKeyDown(KeyCode.J))
+        {
+            Instantiate(bomba, dolpin.transform.position, Quaternion.identity);
+        }
         if (hasBomb == true)
         {
             Debug.Log("HAS BOMB");
@@ -44,7 +52,7 @@ public class dolphin : MonoBehaviour
     {
         if (onground == true)
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (collision.gameObject.tag == "Bomb")
             {
                 hasBomb = true;
                 Destroy(collision.gameObject);

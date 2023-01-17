@@ -34,13 +34,13 @@ public class lookat : MonoBehaviour
        dashtext.text = "Dashes remaining: " + dashAmount;
         if (Input.GetKey(Left))
         {
-            transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 60 * Time.deltaTime);
+            transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 100 * Time.deltaTime);
         }
         dir = (LookAt.transform.position - dolphinPos.transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
         if (Input.GetKey(Right))
         {
-            transform.RotateAround(dolphinPos.transform.position, Vector3.back, 60 * Time.deltaTime);
+            transform.RotateAround(dolphinPos.transform.position, Vector3.back, 100 * Time.deltaTime);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift) && dashAmount > 0 )
