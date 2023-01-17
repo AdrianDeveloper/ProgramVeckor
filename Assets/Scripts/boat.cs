@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class boat : MonoBehaviour
 {
+    Vector3 dolphin;
     [SerializeField]
     float speed;
-    [SerializeField]
-    Transform del;
     [SerializeField]
     Transform båt;
     Vector3 dir;
@@ -20,12 +19,13 @@ public class boat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dir = (del.transform.position - båt.transform.position).normalized;
+        dolphin = GameObject.FindGameObjectWithTag("Player").transform.position;
+        dir = (dolphin - båt.transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
