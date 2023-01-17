@@ -42,7 +42,7 @@ Material:
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
-    - _Sharpness: -0.82
+    - _Sharpness: 0.51
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
