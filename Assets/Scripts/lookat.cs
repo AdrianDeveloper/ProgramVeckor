@@ -40,12 +40,20 @@ public class lookat : MonoBehaviour
 
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "border")
+        if (collision.gameObject.tag == "Border") 
         {
-            print ("balls");
-        }
+            StartCoroutine(MyCoroutine());
+           
+        } 
+    }
+
+    IEnumerator MyCoroutine()
+    {
+        speed = -5;
+        yield return new WaitForSeconds(1);
+        speed = 5;
     }
 }
 
