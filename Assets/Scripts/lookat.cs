@@ -16,6 +16,7 @@ public class lookat : MonoBehaviour
     private KeyCode Left = KeyCode.A;
     [SerializeField]
     private KeyCode Right = KeyCode.D;
+    float dashAmount = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,10 @@ public class lookat : MonoBehaviour
             transform.RotateAround(dolphinPos.transform.position, Vector3.back, 60 * Time.deltaTime);
         }
 
-
+        if (Input.GetKeyUp(KeyCode.LeftShift) && dashAmount > 0 )
+        {
+            StartCoroutine(dash());
+        }
 
 
     }
@@ -53,6 +57,13 @@ public class lookat : MonoBehaviour
     {
         speed = -5;
         yield return new WaitForSeconds(1);
+        speed = 5;
+    }
+    IEnumerator dash()
+    {
+        dashAmount -= 1; 
+        speed = 10;
+        yield return new WaitForSeconds(2);
         speed = 5;
     }
 }
