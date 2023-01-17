@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class dolphin : MonoBehaviour
 {
+    Vector3 dir;
     [SerializeField]
     Transform dolpin;
     [SerializeField]
-    Transform bomba;
+    GameObject bomba;
     Animator animator;
     private Renderer rend;
     public bool onground = true;
@@ -30,7 +31,8 @@ public class dolphin : MonoBehaviour
     {
         if (hasBomb == true & Input.GetKeyDown(KeyCode.J))
         {
-            Instantiate(bomba, dolpin.transform.position, Quaternion.identity);
+            Instantiate(bomba, dolpin.transform.position + dir, Quaternion.identity);
+            hasBomb = false;
         }
         if (hasBomb == true)
         {
@@ -52,11 +54,14 @@ public class dolphin : MonoBehaviour
     {
         if (onground == true)
         {
-            if (collision.gameObject.tag == "Bomb")
-            {
-                hasBomb = true;
-                Destroy(collision.gameObject);
-            }
+            
+            
+                if (collision.gameObject.tag == "Bomb")
+                {
+                    hasBomb = true;
+                    Destroy(collision.gameObject);
+                }
+            
         }
     
        
