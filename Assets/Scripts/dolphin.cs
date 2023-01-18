@@ -29,7 +29,7 @@ public class dolphin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasBomb == true & Input.GetKeyDown(KeyCode.J))
+        if (hasBomb == true & onground == false & Input.GetKeyDown(KeyCode.J))
         {
             Instantiate(bomba, dolpin.transform.position + dir, Quaternion.identity);
             hasBomb = false;
@@ -42,6 +42,8 @@ public class dolphin : MonoBehaviour
         {
             rend.material.color = colorToTurnTo;
             onground = false;
+            new WaitForSeconds(5);
+            onground = true;
         }
         if (Input.GetKeyDown(dropBomb))
         {
