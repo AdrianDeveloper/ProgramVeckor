@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1139197350763916957}
   m_Layer: 0
   m_Name: "b\xE5t"
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1347abc0c87824483efe1bd8574284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BOMB: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
   scoreText: {fileID: 0}
   speed: 3
   "b\xE5t": {fileID: 1210602429598317100}
