@@ -7,6 +7,8 @@ public class dolphin : MonoBehaviour
 {
     Vector3 dir;
     [SerializeField]
+    Transform lookat;
+    [SerializeField]
     Transform dolpin;
     [SerializeField]
     GameObject bomba;
@@ -29,9 +31,10 @@ public class dolphin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasBomb == true & onground == false & Input.GetKeyDown(KeyCode.J))
+        dir = (dolpin.transform.position - lookat.transform.position).normalized; 
+        if (hasBomb == true & Input.GetKeyDown(KeyCode.J))
         {
-            Instantiate(bomba, dolpin.transform.position + dir, Quaternion.identity);
+            Instantiate(bomba, dolpin.transform.position + dir * 3 , Quaternion.identity);
             hasBomb = false;
         }
         if (hasBomb == true)
@@ -42,8 +45,6 @@ public class dolphin : MonoBehaviour
         {
             rend.material.color = colorToTurnTo;
             onground = false;
-            new WaitForSeconds(5);
-            onground = true;
         }
         if (Input.GetKeyDown(dropBomb))
         {

@@ -5,6 +5,8 @@ using TMPro;
 
 public class boat : MonoBehaviour
 {
+    [SerializeField]
+    GameObject BOMB;
     int score = 0;
     [SerializeField]
     TextMeshProUGUI scoreText;
@@ -30,13 +32,10 @@ public class boat : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                score += 1;
-                Destroy(this.gameObject);
-            }
+        if (collision.gameObject.tag == "Bomb" )
+        {   
+            score += 1;
+            Destroy(this.gameObject);
         }
     }
 }
