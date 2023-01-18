@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class dolphin : MonoBehaviour
 {
@@ -67,8 +67,11 @@ public class dolphin : MonoBehaviour
                 }
             
         }
-    
-       
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
 
