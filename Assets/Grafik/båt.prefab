@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOMB: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 2826391558729815250, guid: 97954f5273c71494c9d0e6aa94065226, type: 3}
   speed: 3
   "b\xE5t": {fileID: 1210602429598317100}
 --- !u!50 &5705243637337998102
