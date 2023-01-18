@@ -1292,6 +1292,7 @@ MonoBehaviour:
   bomba: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
   onground: 1
   hasBomb: 0
+  isDead: 0
   colorToTurnTo: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1748438435
 Animator:

@@ -16,6 +16,7 @@ public class dolphin : MonoBehaviour
     private Renderer rend;
     public bool onground = true;
     public bool hasBomb = false;
+    public bool isDead = false;
     [SerializeField]
     private Color colorToTurnTo = Color.white;
     private KeyCode dropBomb = KeyCode.Q;
@@ -50,6 +51,11 @@ public class dolphin : MonoBehaviour
         {
             hasBomb = false;
         }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            isDead = true;
+        }
+        animator.SetBool("isDead", isDead);
         animator.SetBool("hasBomb", hasBomb);
     }
 
