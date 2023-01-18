@@ -61,6 +61,7 @@ public class dolphin : MonoBehaviour
             
                 if (collision.gameObject.tag == "Bomb")
                 {
+
                     hasBomb = true;
                     Destroy(collision.gameObject);
                 }

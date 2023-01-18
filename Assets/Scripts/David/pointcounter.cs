@@ -5,9 +5,10 @@ using TMPro;
 
 public class pointcounter : MonoBehaviour
 {
-
-    int score = 0;
+    [SerializeField]
     TextMeshProUGUI scoreText;
+    public static int score;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,7 @@ public class pointcounter : MonoBehaviour
     void Update()
     { //functional counter v
         scoreText.text = score + " points";
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            score += 1;
-        }
+      
     }
+    
 }
