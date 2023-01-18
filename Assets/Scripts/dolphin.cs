@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class dolphin : MonoBehaviour
 {
-    int length = 3;
-    [SerializeField]
-    Transform lookAt;
     Vector3 dir;
     [SerializeField]
     Transform dolpin;
@@ -20,7 +17,7 @@ public class dolphin : MonoBehaviour
     [SerializeField]
     private Color colorToTurnTo = Color.white;
     private KeyCode dropBomb = KeyCode.Q;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +29,9 @@ public class dolphin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dir = (dolpin.transform.position - lookAt.transform.position).normalized;
         if (hasBomb == true & Input.GetKeyDown(KeyCode.J))
         {
-            Instantiate(bomba, dolpin.transform.position + dir*length, Quaternion.identity);
+            Instantiate(bomba, dolpin.transform.position + dir, Quaternion.identity);
             hasBomb = false;
         }
         if (hasBomb == true)
