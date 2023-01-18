@@ -566,25 +566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2826391558729815253, guid: 97954f5273c71494c9d0e6aa94065226, type: 3}
       propertyPath: m_AnchoredPosition.x
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-      value: 3398
-      objectReference: {fileID: 0}
-    - target: {fileID: 2826391558729815253, guid: 97954f5273c71494c9d0e6aa94065226, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1309
-=======
->>>>>>> Stashed changes
       value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 2826391558729815253, guid: 97954f5273c71494c9d0e6aa94065226, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 162.5
-<<<<<<< Updated upstream
-=======
->>>>>>> 5e94c6039337c2264eff4e394afec991e66a7ad1
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2826391558729815253, guid: 97954f5273c71494c9d0e6aa94065226, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -753,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.09
+  m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -938,53 +924,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &990612311
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 990612312}
-  - component: {fileID: 990612313}
-  m_Layer: 0
-  m_Name: spawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &990612312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990612311}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 100, z: 1}
-  m_LocalScale: {x: 10, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1936855619}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &990612313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990612311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 396936371ec527e4b94500fd57854cdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 990612312}
-  boat: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
-  delfin: {fileID: 1748438433}
 --- !u!224 &1067088095 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8980067733647754974, guid: 9e412ebc041f8fb429eed909089f364c, type: 3}
@@ -1301,19 +1240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b043274d9c94e4e8c170a18264c6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   dolpin: {fileID: 0}
   bomba: {fileID: 0}
-=======
-<<<<<<< HEAD
-  lookAt: {fileID: 1936855619}
-  dolpin: {fileID: 1748438433}
-  bomba: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
-=======
-  dolpin: {fileID: 0}
-  bomba: {fileID: 0}
->>>>>>> 5e94c6039337c2264eff4e394afec991e66a7ad1
->>>>>>> Stashed changes
   onground: 1
   hasBomb: 0
   colorToTurnTo: {r: 1, g: 1, b: 1, a: 1}
@@ -1609,7 +1537,6 @@ Transform:
   - {fileID: 1748438433}
   - {fileID: 57263091}
   - {fileID: 2130542007}
-  - {fileID: 990612312}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1861,25 +1788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8980067733647754974, guid: 9e412ebc041f8fb429eed909089f364c, type: 3}
       propertyPath: m_AnchoredPosition.x
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-      value: -3341
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980067733647754974, guid: 9e412ebc041f8fb429eed909089f364c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1305
-=======
->>>>>>> Stashed changes
       value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 8980067733647754974, guid: 9e412ebc041f8fb429eed909089f364c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -162.5
-<<<<<<< Updated upstream
-=======
->>>>>>> 5e94c6039337c2264eff4e394afec991e66a7ad1
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8980067733647754974, guid: 9e412ebc041f8fb429eed909089f364c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

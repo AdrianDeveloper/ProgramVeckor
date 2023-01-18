@@ -28,12 +28,15 @@ public class boat : MonoBehaviour
         dir = (dolphin - båt.transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Bomb")
+        if (collision.gameObject.tag == "Player")
         {
-            print("du e bög");
-             Destroy(gameObject);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                score += 1;
+                Destroy(this.gameObject);
+            }
         }
     }
 }
