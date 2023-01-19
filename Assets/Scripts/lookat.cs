@@ -54,17 +54,12 @@ public class lookat : MonoBehaviour
     {
         if (collision.gameObject.tag == "Border") 
         {
-            StartCoroutine(MyCoroutine());
-           
+            Destroy(this.gameObject);
+
         } 
     }
 
-    IEnumerator MyCoroutine()
-    {
-        speed = -5;
-        yield return new WaitForSeconds(1);
-        speed = 5;
-    }
+  
     IEnumerator dash()
     {
         dashAmount -= 1; 
