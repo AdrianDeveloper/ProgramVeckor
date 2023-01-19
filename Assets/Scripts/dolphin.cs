@@ -31,19 +31,15 @@ public class dolphin : MonoBehaviour
     {
         animator.SetBool("hasBomb", hasBomb);
         dir = (dolpin.transform.position - lookat.transform.position).normalized;
-        if (hasBomb == true & Input.GetKeyDown(KeyCode.J))
+        if (hasBomb == true & Input.GetKeyDown(dropBomb))
         {
             Instantiate(bomba, dolpin.transform.position + dir * 3, Quaternion.identity);
             hasBomb = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.RightShift))
         {
             rend.material.color = colorToTurnTo;
             onground = false;
-        }
-        if (Input.GetKeyDown(dropBomb))
-        {
-            hasBomb = false;
         }
     }
 
