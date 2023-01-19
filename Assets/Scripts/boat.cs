@@ -7,26 +7,28 @@ public class boat : MonoBehaviour
 {
     [SerializeField]
     GameObject BOMB;
- 
+
+    Transform dp;
     Vector3 dolphin;
     [SerializeField]
     float speed;
     [SerializeField]
     Transform båt;
     Vector3 dir;
+    
     // Start is called before the first frame update
     void Start()
     {
-    
+        dp = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      
-        dolphin = GameObject.FindGameObjectWithTag("Player").transform.position;
-        dir = (dolphin - båt.transform.position).normalized;
-        transform.position += dir * speed * Time.deltaTime;
+       // dir = (dolphin - båt.transform.position).normalized;
+      //  transform.position += dir * speed * Time.deltaTime;
+        transform.LookAt(dp.position);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
