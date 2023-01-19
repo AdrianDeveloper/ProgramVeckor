@@ -24,7 +24,6 @@ public class dolphin : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         animator = GetComponent<Animator>();
-        
     }
 
     // Update is called once per frame
