@@ -1667,7 +1667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashtext: {fileID: 1067088096}
-  speed: 5
   dolphinPos: {fileID: 1748438433}
   LookAtDelfin: {fileID: 1936855619}
   Left: 97
@@ -1803,7 +1802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210602429598317100, guid: f5447ad2b0a454b4eaa202d18a3a4446, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1210602429598317100, guid: f5447ad2b0a454b4eaa202d18a3a4446, type: 3}
       propertyPath: m_LocalPosition.y

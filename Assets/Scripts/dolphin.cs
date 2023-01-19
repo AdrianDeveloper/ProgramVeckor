@@ -54,7 +54,9 @@ public class dolphin : MonoBehaviour
         {
             animator.ResetTrigger("Die");
             animator.SetTrigger("Die");
-            lookAtScript.speed = 0;
+            pointcounter.score = 0;
+            LookAtScript.dashAmount = 3;
+            LookAtScript.speed = 0;
             Invoke("GameOver", 2);
         }
     }

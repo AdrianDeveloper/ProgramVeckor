@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
      // Restart is called on click
    public void Restart()
     {
+        LookAtScript.speed = 5;
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }

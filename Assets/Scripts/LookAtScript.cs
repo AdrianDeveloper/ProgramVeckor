@@ -10,7 +10,7 @@ public class LookAtScript : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI dashtext;
     [SerializeField]
-    public float speed = 5;
+    public static float speed = 5;
     [SerializeField]
     Transform dolphinPos;
     [SerializeField]
@@ -19,7 +19,7 @@ public class LookAtScript : MonoBehaviour
     private KeyCode Left = KeyCode.A;
     [SerializeField]
     private KeyCode Right = KeyCode.D;
-    float dashAmount = 3;
+    public static float dashAmount = 3;
 
     TextMeshProUGUI dashAmountText;
     // Start is called before the first frame update
