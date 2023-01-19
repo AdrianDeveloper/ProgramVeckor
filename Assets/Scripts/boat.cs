@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class boat : MonoBehaviour
 {
+    int score;
     [SerializeField]
     GameObject BOMB;
     public Animator animator;
@@ -38,13 +39,13 @@ public class boat : MonoBehaviour
         {
             animator.ResetTrigger("BoatExplosion");
             animator.SetTrigger("BoatExplosion");
+            pointcounter.score += 1;
             StartCoroutine(Timer());
         }
     }
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(0.5f);
-        pointcounter.score += 1;
         Destroy(this.gameObject);
     }
 }
