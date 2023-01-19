@@ -19,15 +19,17 @@ public class boat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dp = GameObject.FindGameObjectWithTag("Player").transform;
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-       // dir = (dolphin - båt.transform.position).normalized;
-      //  transform.position += dir * speed * Time.deltaTime;
+        dp = GameObject.FindGameObjectWithTag("Player").transform;
+        dolphin = GameObject.FindGameObjectWithTag("Player").transform.position;
+        dir = (dolphin - båt.transform.position).normalized;
+        transform.position += dir * speed * Time.deltaTime;
         transform.LookAt(dp.position);
     }
     private void OnCollisionEnter2D(Collision2D collision)
