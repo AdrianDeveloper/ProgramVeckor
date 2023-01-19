@@ -7,7 +7,7 @@ public class boat : MonoBehaviour
 {
     [SerializeField]
     GameObject BOMB;
-
+    public Animator animator;
     Transform dp;
     Vector3 dolphin;
     [SerializeField]
@@ -36,8 +36,15 @@ public class boat : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bomb" )
         {
-            pointcounter.score += 1;
-            Destroy(this.gameObject);
+            animator.ResetTrigger("BoatExplosion");
+            animator.SetTrigger("BoatExplosion");
+            StartCoroutine(Timer());
         }
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        pointcounter.score += 1;
+        Destroy(this.gameObject);
     }
 }

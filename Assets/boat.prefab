@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5705243637337998102}
   - component: {fileID: -1139197350763916957}
   m_Layer: 0
-  m_Name: Boat
+  m_Name: boat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BOMB: {fileID: 5568093957204351841, guid: b6dde71db6e314b4d9b097efa0b5872a, type: 3}
+  animator: {fileID: 7238198461201744660}
   speed: 3
   "b\xE5t": {fileID: 1210602429598317100}
 --- !u!50 &5705243637337998102
@@ -108,6 +109,7 @@ GameObject:
   - component: {fileID: 7844477888098054003}
   - component: {fileID: 1872478402326956856}
   - component: {fileID: 7497026198499866550}
+  - component: {fileID: 7238198461201744660}
   m_Layer: 0
   m_Name: BoatGraphics
   m_TagString: Untagged
@@ -208,3 +210,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!95 &7238198461201744660
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498784657455264330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d90cf82c7f1b364db9b0df64c0e6831, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
