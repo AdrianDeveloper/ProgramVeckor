@@ -44,7 +44,7 @@ public class boat : MonoBehaviour
             StartCoroutine(Timer());
         }
     }
-    //death timer v
+    //death timer v /David
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(0.5f);
