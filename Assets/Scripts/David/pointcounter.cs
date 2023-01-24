@@ -21,5 +21,5 @@ public class pointcounter : MonoBehaviour
         scoreText.text = score + " points";
       
     }
-    
+    //this entire code was made so that you could copy over all of the elements from it to other ones.
 }

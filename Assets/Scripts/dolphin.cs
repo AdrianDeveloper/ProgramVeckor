@@ -13,7 +13,7 @@ public class dolphin : MonoBehaviour
     Animator animator;
     private Renderer rend;
     public bool onground = true;
-    public bool hasBomb = false;
+    public bool hasBomb = false; //if dolphin has a bomb
     [SerializeField]
     private Color colorToTurnTo = Color.white;
     private KeyCode dropBomb = KeyCode.Q;
