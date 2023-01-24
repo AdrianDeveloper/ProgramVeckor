@@ -29,13 +29,15 @@ public class dolphin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Släppa bomben
         animator.SetBool("hasBomb", hasBomb);
         dir = (dolpin.transform.position - lookat.transform.position).normalized;
-        if (hasBomb == true & Input.GetKeyDown(dropBomb))
+        if (hasBomb == true & Input.GetKeyDown(dropBomb)) // Keybind för att släppa bomben.
         {
             Instantiate(bomba, dolpin.transform.position + dir * 3, Quaternion.identity);
             hasBomb = false;
         }
+        // Immortality easter egg
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
             rend.material.color = colorToTurnTo;
@@ -45,11 +47,15 @@ public class dolphin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Kollar om man är på marken, inte har en bomb och en man colliderar med en Bomb.
         if (collision.gameObject.tag == "Bomb" & onground == true & hasBomb == false)
         {
+            // Gör boolen "hasBomb" till sant.
             hasBomb = true;
+            // Raderar bomben
             Destroy(collision.gameObject);
         }
+        // om man kolliderar med fienden så spelas dödsanimationen och poängen och dashes blir reset.
         if (collision.gameObject.tag == "Enemy")
         {
             animator.ResetTrigger("Die");
@@ -60,7 +66,7 @@ public class dolphin : MonoBehaviour
             Invoke("GameOver", 2);
         }
     }
-
+    // Skickas till game over skärmen.
     void GameOver()
     {
         SceneManager.LoadScene("GameOver");
