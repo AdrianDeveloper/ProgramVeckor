@@ -22,6 +22,7 @@ public class dolphin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // VIKTIGT
         rend = GetComponent<Renderer>();
         animator = GetComponent<Animator>();
     }
