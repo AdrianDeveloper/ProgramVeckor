@@ -47,7 +47,7 @@ public class dolphin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Kollar om man är på marken, inte har en bomb och en man colliderar med en Bomb.
+        // Kollar om man är på marken, inte har en bomb och om man colliderar med en Bomb. - Emil
         if (collision.gameObject.tag == "Bomb" & onground == true & hasBomb == false)
         {
             // Gör boolen "hasBomb" till sant.
@@ -55,7 +55,7 @@ public class dolphin : MonoBehaviour
             // Raderar bomben
             Destroy(collision.gameObject);
         }
-        // om man kolliderar med fienden så spelas dödsanimationen och poängen och dashes blir reset.
+        // om man kolliderar med fienden så spelas dödsanimationen och poängen och dashes blir reset. - adrian
         if (collision.gameObject.tag == "Enemy")
         {
             animator.ResetTrigger("Die");

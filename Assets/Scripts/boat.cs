@@ -35,7 +35,7 @@ public class boat : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //death animation + deathtrigger V
+        //death animation + deathtrigger V - adrian
         if (collision.gameObject.tag == "Bomb" )
         {
             animator.ResetTrigger("BoatExplosion");
@@ -51,3 +51,4 @@ public class boat : MonoBehaviour
         Destroy(this.gameObject);
     }
 }
+

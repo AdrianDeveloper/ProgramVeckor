@@ -21,7 +21,7 @@ public class spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(delfin.transform.position, Vector3.forward, 5);
+        transform.RotateAround(delfin.transform.position, Vector3.forward, 5);var      //roterar ett object runt delfinen precis utanför skärmen som spawnar in bomber eller båtar - Emil
         time += 1 * Time.deltaTime;
         if (time >= 15)
         {

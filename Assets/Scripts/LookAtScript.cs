@@ -32,12 +32,15 @@ public class LookAtScript : MonoBehaviour
     void Update()
     {
         dashtext.text = "Dashes remaining: " + dashAmount; //dash amount /David
+       
+        //movement - Emil
+        
         if (Input.GetKey(Left)) // left rotation
         {
-            transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 100 * Time.deltaTime);
+            transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 100 * Time.deltaTime); 
         }
-        dir = (LookAtDelfin.transform.position - dolphinPos.transform.position).normalized;
-        transform.position += dir * speed * Time.deltaTime;
+        dir = (LookAtDelfin.transform.position - dolphinPos.transform.position).normalized; // HIttar vectorn mellan delfinen och lookat objectet
+        transform.position += dir * speed * Time.deltaTime; // får delfinen att röra på sig samt bestämmer fart genom att använda dir.normalized * speed då normalized betyder att värdena på vectorn aldrig kan bli högre en 1
         if (Input.GetKey(Right)) //right rotation
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.back, 100 * Time.deltaTime);
