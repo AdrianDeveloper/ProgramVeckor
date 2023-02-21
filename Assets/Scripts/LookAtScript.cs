@@ -5,7 +5,7 @@ using TMPro;
 
 public class LookAtScript : MonoBehaviour
 {
-     
+    [SerializeField] Rect bounds;
     Vector3 dir;
     [SerializeField]
     TextMeshProUGUI dashtext; //the text showing dash amount /david
@@ -32,10 +32,12 @@ public class LookAtScript : MonoBehaviour
     void Update()
     {
         dashtext.text = "Dashes remaining: " + dashAmount; //dash amount /David
-       
+
+        transform.position = new Vector3(Mathf.Clamp( transform.position.x, bounds.x,bounds.width), Mathf.Clamp(transform.position.y, bounds.y, bounds.width), 0);
+
         //movement - Emil
-        
-        if (Input.GetKey(Left)) // left rotation
+       
+        if (Input.GetKey(Left)) // left rotationz
         {
             transform.RotateAround(dolphinPos.transform.position, Vector3.forward, 100 * Time.deltaTime); 
         }
